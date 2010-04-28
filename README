@@ -7,11 +7,11 @@ USAGE
 The script "solver" is an entry point to various modules. To solve a SAT
 instance, use:
 
-`solver utexas.portfolio.solve --seed <RANDOMSEED> path/to/instance`
+`solver utexas.tools.portfolio.solve -v --seed <RANDOMSEED> <path/to/instance>`
 
-To get more usage information on the SAT portfolio solver, use:
+For additional usage information on this portfolio solver, use:
 
-`solver utexas.portfolio.solve --help`
+`solver utexas.tools.portfolio.solve --help`
 
 LICENSE
 -------

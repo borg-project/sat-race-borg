@@ -1,0 +1,75 @@
+{
+    "solvers": {
+        "sat/2009/CirCUs": {
+            "command": [
+                "HERE/CirCUs",
+                "BENCHNAME",
+                "-t",
+                "TIMEOUT"
+                ]
+            },
+        "sat/2009/clasp": {
+            "command": [
+                "HERE/clasp",
+                "--file=BENCHNAME",
+                "--dimacs",
+                "--number=1",
+                "--sat-p=20,25,150",
+                "--hParam=0,512"
+                ]
+            },
+        "sat/2009/glucose": {
+            "command": [
+                "HERE/glucose_static",
+                "BENCHNAME"
+                ]
+            },
+        "sat/2009/LySAT_i": {
+            "command": [
+                "HERE/LySATi",
+                "BENCHNAME"
+                ]
+            },
+        "sat/2009/minisat_09z": {
+            "command": [
+                "HERE/minisat_09z",
+                "-random-seed=RANDOMSEED",
+                "BENCHNAME"
+                ]
+            },
+        "sat/2009/minisat_cumr_p": {
+            "command": [
+                "HERE/minisat_cumr_p",
+                "BENCHNAME"
+                ]
+            },
+        "sat/2009/mxc_09": {
+            "command": [
+                "HERE/mxc-sat09",
+                "-i",
+                "BENCHNAME"
+                ]
+            },
+        "sat/2009/precosat": {
+            "command": [
+                "HERE/precosat",
+                "BENCHNAME"
+                ]
+            },
+         "sat/2009/rsat_09": {
+            "command": [
+                "HERE/rsat",
+                "BENCHNAME",
+                "-s"
+                ]
+            },
+         "sat/2009/SApperloT": {
+            "command": [
+                "HERE/SApperloT-base",
+                "-seed=RANDOMSEED",
+                "BENCHNAME"
+                ]
+            }
+        }
+    }
+

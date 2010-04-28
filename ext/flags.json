@@ -1,11 +1,11 @@
 {
     "utexas.sat.solvers": [
         "--solvers-file",
-        "$BORG_ROOT/ext/solvers/sat/solvers.json"
+        "$BORG_ROOT/ext/solvers/solvers.json"
         ],
     "utexas.sat.preprocessors": [
         "--satelite-file",
-        "$BORG_ROOT/ext/solvers/sat/other/satelite/sat2005_submission/SatELite_submission/SatELite/SatELite_release"
+        "$BORG_ROOT/ext/preprocessors/SatELite_release"
         ],
     "utexas.tools.sat.run_solvers": [
         "--verify-tmpdir",
