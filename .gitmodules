@@ -1,0 +1,6 @@
+[submodule "src/dep/borg"]
+	path = src/dep/borg
+	url = ssh://cargo-cult.org/home/bsilverthorn/git/quest/acridid
+[submodule "src/dep/cargo"]
+	path = src/dep/cargo
+	url = ssh://cargo-cult.org/home/bsilverthorn/git/cargo/kit
