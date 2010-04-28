@@ -1,0 +1,21 @@
+BORG-SAT-10.04.30
+=================
+
+USAGE
+-----
+
+The script "solver" is an entry point to various modules. To solve a SAT
+instance, use:
+
+`solver utexas.portfolio.solve --seed <RANDOMSEED> path/to/instance`
+
+To get more usage information on the SAT portfolio solver, use:
+
+`solver utexas.portfolio.solve --help`
+
+LICENSE
+-------
+
+This software package is provided under the non-copyleft free "MIT" license.
+The complete legal notice can be found in the included ext/LICENSE file.
+
