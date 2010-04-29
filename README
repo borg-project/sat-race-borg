@@ -13,6 +13,14 @@ For additional usage information on this portfolio solver, use:
 
 `solver utexas.tools.portfolio.solve --help`
 
+STATUS
+------
+
+This version is a qualification-round *preliminary* release. If you are
+studying this code, we strongly recommend that you contact us to obtain a
+recent source tree. This version is unpolished, in-progress, and contains
+numerous chunks of obsolete and/or unfinished code.
+
 LICENSE
 -------
 
