@@ -69,6 +69,13 @@
                 "-seed=RANDOMSEED",
                 "BENCHNAME"
                 ]
+            },
+        "sat/2009/gnovelty+2": {
+            "command": [
+                "HERE/gnovelty+2",
+                "BENCHNAME",
+                "RANDOMSEED"
+                ]
             }
         }
     }
