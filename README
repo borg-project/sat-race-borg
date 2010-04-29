@@ -15,7 +15,7 @@ USAGE
 The script "solver" is an entry point to various modules. To solve a SAT
 instance, use:
 
-`solver utexas.tools.portfolio.solve -v -m ext/model.pickle --seed <RANDOMSEED> <path/to/instance>`
+`solver utexas.tools.portfolio.solve -v -m ext/dcm_model.pickle --seed <RANDOMSEED> <path/to/instance>`
 
 For additional usage information on this portfolio solver, use:
 
