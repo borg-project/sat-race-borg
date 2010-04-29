@@ -1,6 +1,14 @@
 BORG-SAT-10.04.30
 =================
 
+COMPILATION
+-----------
+
+From the `src` directory, run `make`. The build process requires recent
+versions of gcc, cmake, Python, and boost. Note that `src/Makefile` is only a
+thin wrapper around the richer, cmake-based build system which the
+`src/dep/cargo/run_cmake` script will populate under `src/dep/cargo/build`.
+
 USAGE
 -----
 
