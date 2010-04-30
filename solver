@@ -5,65 +5,11 @@
 
 import sys
 
-def exec_main():
-    """
-    Launch the solver in a custom environment.
-    """
-
-    from os      import (
-        getenv,
-        putenv,
-        execvp,
-        )
-    from os.path import (
-        join,
-        abspath,
-        normpath,
-        basename,
-        )
-
-    # provide the borg root path
-    borg_root = abspath(sys.path[0])
-
-    putenv("BORG_ROOT", borg_root)
-
-    # collect the relevant python paths
-    python_paths   = (
-        join(borg_root, "src/dep/cargo/src/python"),
-        join(borg_root, "src/dep/borg/src/python"),
-        )
-
-    # build the python path environment variable
-    paths_prefix = ":".join(map(normpath, python_paths))
-    current_path = getenv("PYTHONPATH")
-
-    if current_path:
-        putenv("PYTHONPATH", "%s:%s" % (paths_prefix, current_path))
-    else:
-        putenv("PYTHONPATH", paths_prefix)
-
-    # build the flags file environment variable
-    extra_name    = "CARGO_FLAGS_EXTRA_FILE"
-    extra_path    = join(borg_root, "ext/flags.json")
-    current_extra = getenv(extra_name)
-
-    if current_extra:
-        putenv(extra_name, "%s:%s" % (extra_path, current_extra))
-    else:
-        putenv(extra_name, extra_path)
-
-    # build the tmpdir environment variable
-    tmpdir_name = "TMPDIR"
-
-    if getenv(tmpdir_name) is None:
-        putenv(tmpdir_name, join(borg_root, "ext/tmp"))
-
-    # make the call
-    execvp("python", ["python", "-m"] + sys.argv[1:])
+from borg import exec_main
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        exec_main()
+        exec_main(True)
     else:
         print "usage: ./solver <module>"
         print "(see README)"

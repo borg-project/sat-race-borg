@@ -1,6 +1,11 @@
 BORG-SAT-10.04.30
 =================
 
+CONTACT
+-------
+
+Bryan Silverthorn <bsilvert@cs.utexas.edu>
+
 COMPILATION
 -----------
 
@@ -32,6 +37,13 @@ This version is a qualification-round *preliminary* release. If you are
 studying this code, we strongly recommend that you contact us to obtain a
 recent source tree. This version is unpolished, in-progress, and contains
 numerous chunks of obsolete and/or unfinished code.
+
+SUBSOLVERS
+----------
+
+This portfolio solver would not be possible without the immense amount of work
+done by many other people to create the subsolvers it employs. This release
+includes the following set:
 
 LICENSE
 -------
