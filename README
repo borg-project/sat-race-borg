@@ -1,6 +1,14 @@
 BORG-SAT-10.04.30
 =================
 
+STATUS
+------
+
+This version is a qualification-round *preliminary* release. If you are
+studying this code, we strongly recommend that you contact us to obtain a
+recent source tree. This version is unpolished, in-progress, and contains
+numerous chunks of obsolete and/or unfinished code.
+
 CONTACT
 -------
 
@@ -9,10 +17,17 @@ Bryan Silverthorn <bsilvert@cs.utexas.edu>
 COMPILATION
 -----------
 
-From the `src` directory, run `make`. The build process requires recent
-versions of gcc, cmake, Python, and boost. Note that `src/Makefile` is only a
-thin wrapper around the richer, cmake-based build system which the
+From the `src` directory, run `make`. Note that `src/Makefile` is only a thin
+wrapper around the richer, cmake-based build system which the
 `src/dep/cargo/run_cmake` script will populate under `src/dep/cargo/build`.
+The build process requires recent versions of at least:
+
+* gcc
+* boost
+* cmake
+* GSL
+* Python
+* numpy
 
 USAGE
 -----
@@ -26,28 +41,32 @@ For additional usage information on this portfolio solver, use:
 
 `./solver utexas.tools.portfolio.solve --help`
 
-To calculate a machine speed calibration score, do:
+To calculate the machine performance calibration score, do:
 
 `./solver utexas.tools.calibrate -c ext/calibration.json`
-
-STATUS
-------
-
-This version is a qualification-round *preliminary* release. If you are
-studying this code, we strongly recommend that you contact us to obtain a
-recent source tree. This version is unpolished, in-progress, and contains
-numerous chunks of obsolete and/or unfinished code.
 
 SUBSOLVERS
 ----------
 
 This portfolio solver would not be possible without the immense amount of work
 done by many other people to create the subsolvers it employs. This release
-includes the following set:
+includes:
+
+* CirCUs (Hyojung Han, HoonSang Jin, Hyondeuk Kim, and Fabio Somenzi)
+* clasp (Martin Gebser, Benjamin Kaufmann, and Torsten Schaub)
+* glucose (Gilles Audemard and Laurent Simon)
+* gnovelty+2 (Duc Nghia Pham and Charles Gretton)
+* LySATi (Youssef Hamadi, Said Jabbour, and Lakhdar Sais)
+* minisat_09z (Markus Iser)
+* minisat_cumr_p (Kazuya Masuda and Tomio Kamada)
+* MXC (David R. Bregman)
+* precosat (Armin Biere)
+* rsat (Knot Pipatsrisawat and Adnan Darwiche)
+* SApperloT (Stephan Kottler)
 
 LICENSE
 -------
 
-This software package is provided under the non-copyleft free "MIT" license.
+This software package is provided under the free non-copyleft "MIT" license.
 The complete legal notice can be found in the included ext/LICENSE file.
 
