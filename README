@@ -29,6 +29,10 @@ The build process requires recent versions of at least:
 * Python
 * numpy
 
+This package may include some or all of these dependencies installed under
+`ext/prefix`. The solver scripts appropriately set the relevant environment
+variables.
+
 USAGE
 -----
 
