@@ -54,6 +54,7 @@ def exec_main(as_module):
     addenv("PATH", join(borg_root, "ext/prefix/bin"))
     addenv("PYTHONPATH", ":".join(map(normpath, python_paths)))
     addenv("PYTHONHOME", join(borg_root, "ext/prefix"))
+    addenv("CMAKE_PREFIX_PATH", join(borg_root, "ext/prefix"))
     addenv("LD_LIBRARY_PATH", join(borg_root, "ext/prefix/lib"))
     addenv("CARGO_FLAGS_EXTRA_FILE", join(borg_root, "ext/flags.json"))
 
