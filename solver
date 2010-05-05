@@ -4,16 +4,28 @@
 """
 
 if __name__ == "__main__":
+    import sys
+
     from os.path import join
     from borg    import (
         execute_borg,
         get_default_root,
         )
 
+    (instance, seed) = sys.argv[1:]
+
     execute_borg(
         support   = "ext",
         submodule = "src/dep",
+        as_module = True,
+        argv      = [
+            "utexas.tools.portfolio.solve",
+            "-v",
+            "-m",
+            join(get_default_root(), "ext/dcm_model.pickle"),
+            "--seed",
+            seed,
+            instance,
+            ],
         )
-
-    # FIXME need to use the <instance> <seed> format
 

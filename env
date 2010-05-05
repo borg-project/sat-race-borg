@@ -5,10 +5,7 @@
 
 if __name__ == "__main__":
     from os.path import join
-    from borg    import (
-        execute_borg,
-        get_default_root,
-        )
+    from borg    import execute_borg
 
     execute_borg(
         support   = "ext",
