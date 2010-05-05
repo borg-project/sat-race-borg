@@ -3,13 +3,15 @@
 @author: Bryan Silverthorn <bcs@cargo-cult.org>
 """
 
-import sys
-
-from borg import exec_main
-
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        exec_main(False)
-    else:
-        print "usage: ./env <command>"
+    from os.path import join
+    from borg    import (
+        execute_borg,
+        get_default_root,
+        )
+
+    execute_borg(
+        support   = "ext",
+        submodule = "src/dep",
+        )
 

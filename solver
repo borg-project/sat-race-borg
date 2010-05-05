@@ -3,18 +3,17 @@
 @author: Bryan Silverthorn <bcs@cargo-cult.org>
 """
 
-import sys
-
-from borg import exec_main
-
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        exec_main(
-            as_module = True,
-            join(borg_root, "src/dep/cargo/src/python"),
-            join(borg_root, "src/dep/borg/src/python"),
-            join(borg_root, "ext/prefix/lib/python2.6"),
-    else:
-        print "usage: ./solver <module>"
-        print "(see README)"
+    from os.path import join
+    from borg    import (
+        execute_borg,
+        get_default_root,
+        )
+
+    execute_borg(
+        support   = "ext",
+        submodule = "src/dep",
+        )
+
+    # FIXME need to use the <instance> <seed> format
 
