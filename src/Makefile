@@ -1,5 +1,5 @@
 all:
-	cd dep/cargo && ./run_cmake && cd build/active && make
+	../env bash build.sh
 
 clean:
 	rm -r dep/cargo/build
