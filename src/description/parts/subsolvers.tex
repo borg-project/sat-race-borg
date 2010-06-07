@@ -1,0 +1,39 @@
+\section{\label{sec:subsolvers}Portfolio Composition}
+
+Portfolio methods rely entirely on the performance of the solvers they employ,
+and are possible only because of the engineering and research involved in
+making those solvers effective. This version of {\tt borg-sat} considered 13
+subsolvers in its model: every qualifying solver in the application category of
+the final round of the 2009 SAT competition, excluding the reference solvers
+and SATzilla, with two exceptions ({\tt kw} and {\tt MiniSat 2.1}), as well as
+two more recent solvers ({\tt cryptominisat-2.4.2} and {\tt
+precosat-465r2-2ce82ba-100514}). Table \ref{tab:subsolvers} lists these solvers
+and their authors. Note that not all of these solvers were necessarily included
+in the final execution plan.
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+{\bf Name}         & {\bf Reference}\\
+\midrule
+{\tt CircUs 2009-03-23}             & Hyojung Han\\
+{\tt clasp 1.2.0-SAT09-32}          & Benjamin Kaufmann\\
+{\tt glucose 1.0}                   & Gilles Audemard and Laurent Simon\\
+{\tt LySAT i/2009-03-20}            & Youssef Hamadi, Sa\"{i}d Jabbour, and Lakhdar Sa\"{i}s\\
+{\tt ManySAT 1.1 aimd 1/2009-03-20} & Youssef Hamadi, Sa\"{i}d Jabbour, and Lakhdar Sa\"{i}s\\
+{\tt MiniSAT 09z 2009-03-22}        & Markus Iser\\
+{\tt minisat\_cumr p-2009-03-18}    & Kazuya Masuda and Tomio Kamada\\
+{\tt MXC 2009-03-10}                & David Bregman\\
+{\tt precosat 236}                  & Armin Biere\\
+{\tt Rsat 2009-03-22}               & Knot Pipatsrisawat and Adnan Darwiche\\
+{\tt SApperloT base}                & Stephan Kottler\\
+{\tt cryptominisat-2.4.2}           & Mate Soos\\
+{\tt precosat-465r2-2ce82ba-100514} & Armin Biere\\
+\bottomrule
+\end{tabular}
+\caption{\label{tab:subsolvers}Subsolvers considered by the {\tt
+borg-sat-10.06.07} planner.}
+\end{center}
+\end{table*}
+

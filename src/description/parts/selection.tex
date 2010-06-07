@@ -1,0 +1,23 @@
+\section{\label{sec:selection}Computing an Execution Schedule}
+
+Predictions of solver performance are useful only if they can be used to
+execute more appropriate solvers more often. To describe the algorithm
+portfolio situation in decision-theoretic terms, we take our set of past
+observations---in this case, the solvers already executed on this problem
+instance, and their success or failure---as our \emph{belief state}. The
+Bellman equation describes the expected reward of an optimal policy, \[ V^*(s)
+= R(s) + \max_a \gamma \sum_{s'}P(s' | s, a) V^*(s'), \] where $s$ is a
+particular belief state, $R(s)$ describes the reward associated with a state
+(here, let $1$ be the reward of any state in which any solver has been
+successful, and $0$ the reward otherwise), $\gamma$ is an arbitrary discount
+factor (which can be set lower to prefer quickly-obtained solutions more
+strongly), $a$ is an action (the execution of some solver for some amount of
+time), and $P(s'|s,a)$ is the probability of arriving in state $s'$ after
+taking action $a$ in state $s$.  Since the number of possible belief states
+grows quickly as actions are taken, the optimal policy is practical to compute
+only if the portfolio is limited to a short action sequence.
+
+Just such an optimal short sequence of actions was computed offline, using a
+learned DCM model to define $P$; the {\tt borg-sat-10.06.07} solver then
+follows that sequence when solving any new problem instance.
+

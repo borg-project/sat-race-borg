@@ -1,0 +1,29 @@
+\section{Introduction}
+
+\emph{Algorithm portfolio} methods \cite{Huberman1997Economics} use information
+about solvers and problem instances to allocate computational resources among
+multiple solvers, attempting to maximize the time spent on those well suited to
+each instance. Portfolio methods such as SATzilla \cite{Xu2008SATzilla} have
+proved increasingly effective in satisfiability.
+
+An algorithm portfolio must decide which solvers to run and for how long to run
+them. These decisions rely entirely on expectations about solver behavior.
+
+The {\tt borg-sat} solver attempts to to learn predictable aspects of solver
+behavior---such as how likely a solver is to succeed if it has previously
+failed---given data on the successes and failures of solvers on many problem
+instances. The version of this solver submitted to SAT-Race 2010, {\tt
+borg-sat-10.06.07}, assumes a specific \emph{latent class} model of solver
+behavior, a mixture of Dirichlet compound multinomial (DCM) distributions,
+which is used to identify groups of similar problem instances. This model is
+examined in detail by Silverthorn and Miikkulainen
+(2010)\nocite{Silverthorn2010latent}. It captures the basic correlations
+between solvers, runs, and problem instances, as well as the tendency of solver
+outcomes to recur. Unlike the classifier employed by SATzilla, the model
+considers only the success or failure of each past solver run; it does
+\emph{not} consider instance feature information.
+
+This version of {\tt borg-sat} employs the DCM mixture
+model in computing an optimal fixed-length solver execution schedule followed
+for every problem instance, as described in the following section.
+

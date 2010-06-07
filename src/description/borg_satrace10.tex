@@ -1,0 +1,54 @@
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{outlines}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{verbatim}
+\usepackage{sepnum}
+\usepackage[usenames]{color}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+\usetikzlibrary{arrows,backgrounds,fit,positioning,backgrounds,calc,shapes.geometric}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PDFINFO for PDFTeX
+% Uncomment and complete the following for metadata if
+% your paper is typeset using PDFTeX
+\pdfinfo{
+/Title (SAT-Race 2010 Solver Description: borg-sat-10.06.07)
+/Author (Bryan Silverthorn;
+Risto Miikkulainen)
+}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Uncomment only if you need to use section numbers
+% and change the 0 to a 1 or 2
+% \setcounter{secnumdepth}{0}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{SAT-Race 2010 Solver Description: {\tt borg-sat-10.06.07}}
+\author{Bryan Silverthorn \and Risto Miikkulainen\\
+Department of Computer Science\\
+The University of Texas at Austin\\
+% Austin, TX, USA\\
+\{bsilvert,risto\}@cs.utexas.edu}
+
+\begin{document}
+\maketitle
+
+\input{parts/common.tex}
+\input{parts/introduction.tex}
+\input{parts/selection.tex}
+\input{parts/subsolvers.tex}
+\input{parts/conclusion.tex}
+
+\bibliographystyle{aaai}
+\bibliography{references}
+
+\end{document}
+
