@@ -1,6 +1,7 @@
 {
     "solvers": {
         "sat/2009/CirCUs": {
+            "type": "sat_competition",
             "command": [
                 "HERE/CirCUs",
                 "BENCHNAME",
@@ -9,6 +10,7 @@
                 ]
             },
         "sat/2009/clasp": {
+            "type": "sat_competition",
             "command": [
                 "HERE/clasp",
                 "--file=BENCHNAME",
@@ -19,18 +21,21 @@
                 ]
             },
         "sat/2009/glucose": {
+            "type": "sat_competition",
             "command": [
                 "HERE/glucose_static",
                 "BENCHNAME"
                 ]
             },
         "sat/2009/LySAT_i": {
+            "type": "sat_competition",
             "command": [
                 "HERE/LySATi",
                 "BENCHNAME"
                 ]
             },
         "sat/2009/minisat_09z": {
+            "type": "sat_competition",
             "command": [
                 "HERE/minisat_09z",
                 "-random-seed=RANDOMSEED",
@@ -38,12 +43,14 @@
                 ]
             },
         "sat/2009/minisat_cumr_p": {
+            "type": "sat_competition",
             "command": [
                 "HERE/minisat_cumr_p",
                 "BENCHNAME"
                 ]
             },
         "sat/2009/mxc_09": {
+            "type": "sat_competition",
             "command": [
                 "HERE/mxc-sat09",
                 "-i",
@@ -51,12 +58,14 @@
                 ]
             },
         "sat/2009/precosat": {
+            "type": "sat_competition",
             "command": [
                 "HERE/precosat",
                 "BENCHNAME"
                 ]
             },
          "sat/2009/rsat_09": {
+            "type": "sat_competition",
             "command": [
                 "HERE/rsat",
                 "BENCHNAME",
@@ -64,6 +73,7 @@
                 ]
             },
          "sat/2009/SApperloT": {
+            "type": "sat_competition",
             "command": [
                 "HERE/SApperloT-base",
                 "-seed=RANDOMSEED",
@@ -71,10 +81,32 @@
                 ]
             },
         "sat/2009/gnovelty+2": {
+            "type": "sat_competition",
             "command": [
                 "HERE/gnovelty+2",
                 "BENCHNAME",
                 "RANDOMSEED"
+                ]
+            },
+        "sat/other/precosat-465r2-2ce82ba-100514": {
+	    "type"    : "sat_competition",
+            "command" : [
+                "HERE/precosat_465r2",
+                "BENCHNAME"
+                ]
+            },
+        "sat/other/cryptominisat-2.4.2": {
+	    "type"    : "sat_competition",
+            "command" : [
+                "HERE/cryptominisat-2.4.2Linux32",
+                "--randomize=RANDOMSEED",
+                "BENCHNAME"
+                ]
+            },
+        "sat/SatELite": {
+            "type"    : "satelite",
+            "command" : [
+                "$HERE/SatELite_release"
                 ]
             }
         }

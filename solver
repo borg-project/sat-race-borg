@@ -21,11 +21,9 @@ if __name__ == "__main__":
         argv      = [
             "borg.tools.portfolio.solve",
             "-v",
-            "-m",
-            join(get_default_root(), "ext/dcm_model.pickle"),
-            "--seed",
-            seed,
+            join(get_default_root(), "ext/borg_sat_solver.pickle"),
             instance,
+            seed,
             ],
         )
 
