@@ -6,8 +6,8 @@
 if __name__ == "__main__":
     import sys
 
-    from os.path import join
-    from borg    import (
+    from os.path    import join
+    from borg_shell import (
         execute_borg,
         get_default_root,
         )
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         submodule = "src/dep",
         as_module = True,
         argv      = [
-            "utexas.tools.portfolio.solve",
+            "borg.tools.portfolio.solve",
             "-v",
             "-m",
             join(get_default_root(), "ext/dcm_model.pickle"),
