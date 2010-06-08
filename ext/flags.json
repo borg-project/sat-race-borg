@@ -1,18 +1,7 @@
 {
-    "utexas.sat.solvers": [
+    "borg.solvers": [
         "--solvers-file",
         "$BORG_ROOT/ext/solvers/solvers.json"
-        ],
-    "utexas.sat.preprocessors": [
-        "--satelite-file",
-        "$BORG_ROOT/ext/preprocessors/SatELite_release"
-        ],
-    "utexas.tools.sat.run_solvers": [
-        "--verify-tmpdir",
-        "--expected",
-        "$BORG_ROOT/borg/solvers/sat/sat2009/expected.json",
-        "--tasks-dir",
-        "$BORG_ROOT/borg/tasks"
         ]
     }
 

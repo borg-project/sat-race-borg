@@ -4,8 +4,8 @@
 """
 
 if __name__ == "__main__":
-    from os.path import join
-    from borg    import execute_borg
+    from os.path    import join
+    from borg_shell import execute_borg
 
     execute_borg(
         support   = "ext",
